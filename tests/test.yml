@@ -3,7 +3,7 @@
   remote_user: root
   roles:
     - role: ansible-file-retention
-      file-retention:
+      file_retention:
         path: "/var/www/backup"
         user: root
         days: 30

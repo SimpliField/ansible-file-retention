@@ -1,10 +1,10 @@
 ---
-- name: setup file retention on {{ file-retention.path }}
+- name: setup file retention on {{ file_retention.path }}
   cron:
-    name: "file retention on {{ file-retention.path }}"
+    name: "file retention on {{ file_retention.path }}"
     minute: "5"
     hour: "2"
-    job: 'find {{ file-retention.path }} -mindepth 1 -maxdepth 1 -type d -mtime +{{ file-retention.days }} --delete'
-    user: "{{ file-retention.user }}"
+    job: 'find {{ file_retention.path }} -mindepth 1 -maxdepth 1 -type d -mtime +{{ file_retention.days }} --delete'
+    user: "{{ file_retention.user }}"
   tags:
     - preprod
