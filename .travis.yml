@@ -31,7 +31,7 @@ script:
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
   # Check if cron task is set
-  - crontab -l
+  - sudo crontab -l
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
