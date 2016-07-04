@@ -1,4 +1,4 @@
-File retention
+File retention [![Build Status](https://travis-ci.org/SimpliField/ansible-file-retention.svg?branch=master)](https://travis-ci.org/SimpliField/ansible-file-retention) [![Ansible Role](https://img.shields.io/ansible/role/10598.svg?maxAge=2592000)](https://galaxy.ansible.com/SimpliField/file-retention/)
 =========
 
 An ansible role to delete oldest files/path in a defined path
