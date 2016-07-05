@@ -4,7 +4,7 @@
     name: "file retention on {{ file_retention.path }}"
     minute: "5"
     hour: "2"
-    job: 'find {{ file_retention.path }} -mindepth 1 -maxdepth 1 -type d -mtime +{{ file_retention.days }} --delete'
+    job: "find {{ file_retention.path }} -mindepth 1 -maxdepth 1 -type d -mtime +{{ file_retention.days }} -print0 | xargs -0 rm -rf"
     user: "{{ file_retention.user }}"
   tags:
     - cron
